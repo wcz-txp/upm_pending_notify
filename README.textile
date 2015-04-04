@@ -1,0 +1,18 @@
+This is a textpattern plugin. Recompiled to work with textpattern 4.5.x.
+
+
+What this plugin does:
+
+* When someone creates an article with the status “Pending”, all the “Publisher” users receive an email. This email contains very basic information of the article, and link to further view and manage the article. If the author happens to be a Publisher, he does not receive the email.
+* When an article is changed from “Pending” to “Live” status, the article’s author receives a link to view their article on the live site. If the author happens to be a Publisher and set the article to “Live” herself, she does not receive the email.
+
+What this plugin does not do:
+
+* Author notifications are not sent out when article status is changed with the multi-edit feature of the Articles tab. For technical reasons, this could too easily cause grand problems with your site and make your web host very upset with you.
+* Allow all kinds of customizations to the emails sent concerning which article fields are included in the email for preview. The plugin remains nice and lighter-weight by providing only the essential information.
+
+How to use it:
+
+* Install the plugin (which you’ve already done).
+* Activate the plugin.
+* All done.
