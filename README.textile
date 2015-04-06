@@ -1,5 +1,10 @@
 This is a textpattern plugin. Recompiled to work with textpattern 4.5.x.
 
+till 0.1.3 work from Mary Fredborg
+
+Changelog:
+0.1.3 - changed to txpMail function to avoid @Message not accepted for policy reasons@ messages from Yahoo. Messages where sender and recipient are the same, were blocked.
+
 
 What this plugin does:
 

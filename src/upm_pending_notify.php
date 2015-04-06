@@ -10,8 +10,8 @@
 // file name. Uncomment and edit this line to override:
 $plugin['name'] = 'upm_pending_notify';
 
-$plugin['version'] = '0.1.2';
-$plugin['author'] = 'Mary Fredborg';
+$plugin['version'] = '0.1.3';
+$plugin['author'] = 'whocarez';
 $plugin['author_uri'] = '';
 $plugin['description'] = 'Pending article notification.';
 $plugin['type'] = 5; // 0 for regular plugin; 1 if it includes admin-side code; 5 for public- and admin-side code with ajax
@@ -23,6 +23,8 @@ $plugin['order'] = 5; # use 5 as a default; ranges from 1 to 9
 if (0) {
 ?>
 # --- BEGIN PLUGIN HELP ---
+
+Based on the work of Mary Fredborg.
 
 What this plugin does:
 
@@ -180,7 +182,8 @@ How to use it:
                     '{title}'                => $Title,
                 ));
 
-                upm_pending_notify_mail($publisher['RealName'], $publisher['email'], $subject, $body);
+//                upm_pending_notify_mail($publisher['RealName'], $publisher['email'], $subject, $body);
+		txpMail($publisher['email'], $subject, $body);
             }
         }
     }
@@ -213,7 +216,8 @@ How to use it:
                 '{title}'                => $Title,
             ));
 
-            upm_pending_notify_mail($author['RealName'], $author['email'], $subject, $body);
+//            upm_pending_notify_mail($author['RealName'], $author['email'], $subject, $body);
+           txpMail($author['email'], $subject, $body);
         }
     }
 
